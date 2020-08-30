@@ -1,0 +1,111 @@
+{
+  "name": "ts-react",
+  "version": "0.0.1",
+  "description": "React starter with TypeScript, ESLint and Prettier",
+  "main": "public/index.ts",
+  "scripts": {
+    "~~~~~~ DEV COMMANDS ~~~~~~": "",
+    "commit": "git-cz --disable-emoji",
+    "clear-public": "rm -rf ./public/assets",
+    "hmr": "npm run build:dev && NODE_ENV=development webpack-dev-server --hot",
+    "hmr:mocks": "npm run build:dev && cross-env NODE_ENV=development MOCKS=true webpack-dev-server --hot",
+    "plop": "plop",
+    "postplop": "pretty-quick",
+    "serve:prod": "npm run build:prod; http-server ./public -p 9998 --cors",
+    "storybook": "start-storybook -p 9001 -c ./@config/storybook",
+    "test": "jest --coverage",
+    "~~~~~~ BUILD COMMANDS ~~~~~~": "",
+    "build:dev": "NODE_ENV=development webpack",
+    "build:prod": "npm run clear-public; NODE_ENV=production webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tomekbuszewski/ts-react-starter.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "starter"
+  ],
+  "author": "Tomek Buszewski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomekbuszewski/ts-react-starter/issues"
+  },
+  "homepage": "https://github.com/tomekbuszewski/ts-react-starter#readme",
+  "dependencies": {
+    "@loadable/component": "^5.13.1",
+    "babel-plugin-remove-test-ids": "^1.1.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "http-server": "^0.12.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-hot-loader": "^4.12.21"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@hot-loader/react-dom": "^16.13.0",
+    "@storybook/addon-actions": "^6.0.6",
+    "@storybook/addon-backgrounds": "^6.0.6",
+    "@storybook/addon-knobs": "^6.0.6",
+    "@storybook/addon-viewport": "^6.0.6",
+    "@storybook/cli": "^6.0.6",
+    "@storybook/react": "^6.0.6",
+    "@testing-library/jest-dom": "^5.11.2",
+    "@testing-library/react": "^10.4.8",
+    "@types/jest": "^26.0.9",
+    "@types/loadable__component": "^5.13.0",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "babel-loader": "^8.1.0",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^2.0.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-eslint-plugin": "^2.3.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-react": "^7.20.5",
+    "git-cz": "^4.7.0",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "inquirer": "^7.3.3",
+    "jest": "^26.2.2",
+    "msw": "^0.20.3",
+    "plop": "^2.7.4",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "terser-webpack-plugin": "^4.0.0",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-manifest-plugin": "^2.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+import { ReduxAction } from "@typings";
+
+import { {{pascalCase name}}Reducer } from "./typings";
+import { EXAMPLE_ACTION } from "./actions";
+
+const initialState: {{pascalCase name}}Reducer = "";
+
+export default function(state = initialState, action: ReduxAction): {{pascalCase name}}Reducer {
+  const { type } = action;
+
+  switch (type) {
+    case EXAMPLE_ACTION:
+      return state;
+    default:
+      return state;
+  }
+}
